@@ -1,0 +1,64 @@
+# exception_en.yml
+unKnown:
+  code: "9999"
+  message: "An unknown error has occurred."
+userNotFound:
+  code: "1000"
+  message: "This member not exist."
+signinFailed:
+  code: "1001"
+  message: "Account verification failed."
+objectAlreadyExist:
+  code: "1002"
+  message: "Already Exist Object."
+objectNotFound:
+  code: "1003"
+  message: "This data not exist."
+authfailed:
+  code: "1004"
+  message: "failed authentication."
+authExpire:
+  code: "1005"
+  message: "Expired Auth."
+invalidRequest:
+  code: "1006"
+  message: "Bad Request."
+entryPointException:
+  code: "1007"
+  message: "Don't have access permission."
+accessDenied:
+  code: "1008"
+  message: "A resource that can not be accessed with the privileges it has."
+tokenExpired:
+  code: "1009"
+  message: "expired token."
+notSupportedMethod:
+  code: "1010"
+  message: "Method Not Allowed."
+argValidationFailed:
+  code: "2000"
+  message: "invalid param."
+processFailed:
+  code: "2001"
+  message: "failed request."
+
+validate:
+  code1: "Thương hiệu không tồn tại!"
+  code2: "Danh mục không tồn tại!"
+  code3: "Ảnh chính không tồn tại. Vui lòng chọn lại!"
+  code4: "Ảnh phụ không tồn tại. Vui lòng chọn lại!"
+  code5: "Tối đa chỉ dc 5 ảnh phụ!"
+  code55: "Dữ liệu hiện không có!"
+  code6: "Biến Thể Không tồn tại . Vui Lòng chọn Lại!"
+  code7: "Biến Thể Giá Trị Không tồn tại . Vui Lòng chọn Lại!"
+  code8: "Sản Phẩm Không Tồn Tại . Vui Lòng Chọn Lại"
+  # user
+  code20: "Tài khoản không tồn tại!"
+  code21: "Tài khoản này đã tồn tại!"
+  code22: "Email này đã được đăng ký!"
+  code23: "Số điện thoại này đã được đăng ký!"
+  code50: "Sản phẩm đã hết hàng"
+  code51: "Đơn hàng không tồn tại!"
+  # user-gio hang
+  code60: "Sản phẩm trong giỏ bạn đặt hiện đã hết hàng!"
+

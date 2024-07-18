@@ -1,0 +1,44 @@
+# exception_ko.yml
+
+unKnown:
+  code: "9999"
+  message: "알수 없는 오류가 발생하였습니다."
+userNotFound:
+  code: "1000"
+  message: "존재하지 않는 회원입니다."
+signinFailed:
+  code: "1001"
+  message: "계정 검증 실패."
+objectAlreadyExist:
+  code: "1002"
+  message: "해당 정보가 이미 존재 합니다."
+objectNotFound:
+  code: "1003"
+  message: "필요한 정보가 존재 하지 않습니다."
+authfailed:
+  code: "1004"
+  message: "인증에 실패했습니다."
+authExpire:
+  code: "1005"
+  message: "인증 기한이 만료되었습니다."
+invalidRequest:
+  code: "1006"
+  message: "올바르지 않은 요청입니다."
+entryPointException:
+  code: "1007"
+  message: "해당 리소스 접근권한이 없습니다."
+accessDenied:
+  code: "1008"
+  message: "보유한 권한으로 접근할수 없는 리소스 입니다."
+tokenExpired:
+  code: "1009"
+  message: "토큰이 올바르지 않습니다."
+notSupportedMethod:
+  code: "1010"
+  message: "지원하지 않는 호출 입니다."
+argValidationFailed:
+  code: "2000"
+  message: "요청한 파람이 올바르지 않습니다."
+processFailed:
+  code: "2001"
+  message: "요청한 처리에 실패 했습니다."

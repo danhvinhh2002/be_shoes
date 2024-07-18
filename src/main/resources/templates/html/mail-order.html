@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    table,
+    th,
+    td {
+      border: 1px solid #c1cfd1;
+      border-collapse: collapse;
+    }
+  </style>
+</head>
+
+<body style="max-width: 500px; min-width: 300px; margin-top: 20px; font-size: 14px;">
+
+<div>Chào bạn, </div>
+<p>
+  Cảm ơn bạn đã mua sản phẩm của Shop Giày Thể Thao HAUNV. Dưới đây là thông tin đặt hàng của bạn:
+</p>
+
+<div style="display: flex; justify-content: space-between; background: #F97837; color: white; padding: 10px; font-size: 14px;">
+  <p style="font-size: 16px;">THÔNG TIN ĐƠN HÀNG</p>
+  <div>
+    <p>Mã đơn hàng: <span th:text="${order.getMaDonHang()}"/></p>
+    <p>Ngày đặt: <span th:text="${#temporals.format(order.ngayTao, 'dd-MM-yyyy HH:mm:ss')}"/></p>
+  </div>
+</div>
+<table cellpadding="10" cellspacing="10" >
+  <thead>
+  <tr>
+    <th width="40%" align="center"> Tên sản phẩm </th>
+    <th width="20%" align="center">Số lượng</th>
+    <th width="20%" align="center"> Giá sản phẩm</th>
+    <th width="20%" align="center"> Tổng tiền</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr th:each="chiTietDonHang : ${order.getChiTietDonHang()}">
+    <td th:text="${chiTietDonHang.sanPham.tieuDe + ' - ' + chiTietDonHang.motaPhanLoai}"></td>
+    <td th:text="${chiTietDonHang.soLuong}"></td>
+    <td th:text="${#numbers.formatDecimal(chiTietDonHang.giaTien, 0, 'POINT', 0, 'POINT') + ' vnd'}"></td>
+    <td th:text="${#numbers.formatDecimal(chiTietDonHang.giaTien * chiTietDonHang.soLuong, 0, 'POINT', 0, 'POINT') + ' vnd'}"></td>
+  </tr>
+  </tbody>
+</table>
+<br>
+Giảm giá: <span th:text="${#numbers.formatDecimal(order.tongTienGiamGia, 0, 'POINT', 0, 'POINT') + ' vnd'}"></span>
+<p>
+  Phí vận chuyển: <span th:text="${#numbers.formatDecimal(order.phiShip, 0, 'POINT', 0, 'POINT') + ' vnd'}"></span> <br>
+</p>
+<p>
+Tổng tiền: <span th:text="${#numbers.formatDecimal(order.tongGiaCuoiCung, 0, 'POINT', 0, 'POINT') + ' vnd'}"></span>
+</p>
+  Cảm ơn bạn đã sử dụng dịch vụ của chúng tôi.
+
+
+</body>
+
+</html>
